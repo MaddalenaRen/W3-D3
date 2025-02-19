@@ -18,7 +18,7 @@ pageForm.addEventListener('submit', (e) => {
 
     const deleteButton = document.createElement('button')
     deleteButton.innerText = 'Elimina'
-    deleteButton.addEventListener('click', (e) => { cardList.remove() })
+    deleteButton.addEventListener('click', (e) => { cardList.classList('line-trough') })
 
     cardList.appendChild(deleteButton)
     listContainer.appendChild(cardList)
