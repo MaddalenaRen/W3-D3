@@ -4,6 +4,12 @@ const listContainer = document.getElementById('saved-elements')
 const nameInput = document.getElementById('name')
 pageForm.addEventListener('submit', (e) => {
     e.preventDefault()
+    const taskName = nameInput.value.trim()
+
+    if (!taskName) {
+        alert('Il campo non può essere vuoto!')
+        return
+    }
     const elemento = {
         name: nameInput.value
     }
@@ -14,11 +20,12 @@ pageForm.addEventListener('submit', (e) => {
 
     cardList.addEventListener('click', () => {
         cardList.classList.toggle('completed')
+        cardList.classList('line-trough')
     })
 
     const deleteButton = document.createElement('button')
-    deleteButton.innerText = 'Elimina'
-    deleteButton.addEventListener('click', (e) => { cardList.classList('line-trough') })
+    deleteButton.innerText = 'Delete'
+    deleteButton.addEventListener('click', (e) => { cardList.remove() })
 
     cardList.appendChild(deleteButton)
     listContainer.appendChild(cardList)
