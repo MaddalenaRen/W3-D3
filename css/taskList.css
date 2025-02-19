@@ -4,29 +4,67 @@ body {
     font-family: "Montserrat", serif;
     background-color: darkcyan;
     color: azure;
-    margin-left: 30%;
+    text-align: center;
 
 }
 
-.line-trough {
-
-    text-decoration: line-through;
-
+#task-list-form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 0 auto 20px auto;
 }
 
-.completed {
-    text-decoration: line-through;
-    color: white;
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
 }
+
+
 
 li {
-    padding: 5px
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px auto;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 80%;
 }
 
 button {
-    margin-left: 10px;
+    margin: 10px;
     background-color: aliceblue;
     color: darkcyan;
     border-radius: 10px;
     width: 85px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.line-trough,
+.completed {
+    text-decoration: line-through;
+    color: lightgray;
 }
