@@ -2,27 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/taskList.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-List</title>
+  <link rel="stylesheet" href="./css/taskList.css">
+
 </head>
 
 <body>
-    <h1>Task-List</h1>
-    <form id="task-list-form">
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li class="menu"><i class="fa-solid fa-house"></i>Home</li>
+          <li class="menu">Calendar</li>
+          <li class="menu">Agenda</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Task-List</h1>
+      <form id="task-list-form">
         <div id="contenitore">
-            <label for="name">Cosa ti Serve?</label>
-            <input id="name" type="text" placeholder="Mi serve..." />
-            <button type="submit">Add</button>
-            <!--deve aggiungere i nomi della lista alla lista sottostante-->
+          <label for="name">Cosa ti Serve?</label>
+          <input id="name" type="text" placeholder="Mi serve..." />
+          <button type="submit">Add</button>
+          <!--deve aggiungere i nomi della lista alla lista sottostante-->
         </div>
-    </form>
-    <section>
+      </form>
+      <section>
         <ul id="saved-elements">Cose da Comprare</ul>
+      </section>
 
-    </section>
-    <script src="./js/taskList.js"></script>
+
+
+    </main>
+
+    <footer>
+
+      <span id="current-year"></span> - Maddalena Rennella
+    </footer>
+
+  </div>
+  <script src="./js/taskList.js"></script>
+
 </body>
 
 </html>

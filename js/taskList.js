@@ -1,7 +1,14 @@
+const footerSpan = document.getElementById('current-year')
+const year = new Date().getFullYear() // 2025
+footerSpan.innerText = year
+
+
 const pageForm = document.getElementById('task-list-form')
 const listContainer = document.getElementById('saved-elements')
 
 const nameInput = document.getElementById('name')
+
+
 pageForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const taskName = nameInput.value.trim()
